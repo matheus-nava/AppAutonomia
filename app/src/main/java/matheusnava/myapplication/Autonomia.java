@@ -1,6 +1,7 @@
 package matheusnava.myapplication;
 
 import java.util.ArrayList;
+import io.realm.Realm;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,7 +13,7 @@ import android.view.ViewGroup;
  */
 
 public class Autonomia extends RecyclerView.Adapter{
-    private ArrayList<Abastecimento> listaAbast;
+    private RealmResults<Abastecimento> lista;
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -33,12 +34,8 @@ public class Autonomia extends RecyclerView.Adapter{
         return this.getListaAbast().size();
     }
 
-    public ArrayList<Abastecimento> getListaAbast() {
-        return this.listaAbast;
-    }
-
-    public void setListaAbast(ArrayList<Abastecimento> listaAbast) {
-        this.listaAbast = listaAbast;
+    public void setListaAbast(RealmResults<Abastecimento> lista) {
+        this.lista = lista;
     }
 }
 

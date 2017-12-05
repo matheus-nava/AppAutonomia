@@ -1,10 +1,12 @@
 package matheusnava.myapplication;
 
+import io.realm.RealmResults;
+
 /**
  * Created by Matheus Nava on 24/11/2017.
  */
 
-public class Abastecimento {
+public class Abastecimento extends RealmObject{
     private int quilometragem;
     private float litros;
     private String data;
