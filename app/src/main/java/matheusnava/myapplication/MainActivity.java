@@ -7,13 +7,19 @@ import android.view.View;
 import android.widget.TextView;
 import io.realm.Realm;
 
+import io.realm.Realm;
+
 public class MainActivity extends AppCompatActivity {
     private TextView kmAtual;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
+        Realm.init(this);
+=======
 	Realm.init(this);
+>>>>>>> 1701cf5ad3496b5dfb35004be47a0a1b57beee0a
         setContentView(R.layout.activity_main);
 
         this.kmAtual = (TextView) findViewById(R.id.txtKmAtual);

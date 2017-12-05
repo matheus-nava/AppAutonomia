@@ -65,7 +65,7 @@ public class AdcAbastecimento extends AppCompatActivity {
             }catch (ParseException e){
                 Toast.makeText(getApplicationContext(), "Data Invalida!!!", Toast.LENGTH_SHORT).show();
             }catch(Exception f){
-                Toast.makeText(getApplicationContext(), "I DONT KNOW WHAT HAPPENED!!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Ocorreu algum erro: "+f, Toast.LENGTH_LONG).show();
                 finish();
             }
         }

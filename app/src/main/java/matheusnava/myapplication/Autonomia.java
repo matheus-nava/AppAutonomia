@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import io.realm.RealmResults;
+
 /**
  * Created by Matheus Nava on 24/11/2017.
  */
@@ -25,13 +27,17 @@ public class Autonomia extends RecyclerView.Adapter{
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         Gaveta gaveta = (Gaveta) holder;
-        Abastecimento atual = this.getListaAbast().get(position);
+        Abastecimento atual = this.lista.get(position);
         gaveta.engavetamento(atual);
     }
 
     @Override
     public int getItemCount() {
+<<<<<<< HEAD
+        return this.lista.size();
+=======
         return this.getListaAbast().size();
+>>>>>>> 1701cf5ad3496b5dfb35004be47a0a1b57beee0a
     }
 
     public void setListaAbast(RealmResults<Abastecimento> lista) {
